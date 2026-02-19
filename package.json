@@ -1,0 +1,15 @@
+{
+  "name": "pull-request-dojo",
+  "version": "1.0.0",
+  "description": "A simple task manager API for practicing pull request reviews",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "node --watch src/app.js"
+  },
+  "keywords": ["workshop", "code-review", "pull-request"],
+  "license": "Unlicense",
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}
