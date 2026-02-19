@@ -1,6 +1,6 @@
 {
   "name": "pull-request-dojo",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A simple task manager API for practicing pull request reviews",
   "main": "src/app.js",
   "scripts": {
