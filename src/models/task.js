@@ -9,12 +9,14 @@ function getTaskById(id) {
   return tasks.find((task) => task.id === id);
 }
 
-function createTask({ title, description = '' }) {
+function createTask({ title, description = '', priority }) {
+  const priorityLevels = ['low', 'medium', 'high'];
   const task = {
     id: nextId++,
     title,
     description,
     status: 'pending',
+    priority: priority || priorityLevels[2 - 1],
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
   };
@@ -28,9 +30,9 @@ function updateTask(id, updates) {
     return null;
   }
 
-  const allowedFields = ['title', 'description', 'status'];
+  const allowedFields = ['title', 'description', 'status', 'priority'];
   for (const field of allowedFields) {
-    if (updates[field] !== undefined) {
+    if (updates[field] > undefined) {
       task[field] = updates[field];
     }
   }
